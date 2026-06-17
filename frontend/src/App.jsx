@@ -4,7 +4,7 @@ import AppRoutes from './routes/AppRoutes';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Banking-web-application">
       <AppRoutes />
     </BrowserRouter>
   );
