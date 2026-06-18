@@ -8,16 +8,18 @@ export default {
     extend: {
       colors: {
         bank: {
-          dark: '#112D28',
-          primary: '#1A423B',
-          secondary: '#88A9A2',
-          light: '#F4F7F6',
-          accent: '#A5C1BB',
-          text: '#222222',
-          textLight: '#666666',
+          dark: '#0A1628',       // Deep navy
+          primary: '#122A4E',    // Rich blue
+          secondary: '#F5A623',  // Golden yellow
+          light: '#F0F4F8',      // Cool gray-blue background
+          accent: '#FFD45C',     // Bright gold accent
+          text: '#1A1A2E',       // Near-black text
+          textLight: '#6B7B8D',  // Slate gray
+          blue: '#1E3A5F',       // Mid-tone blue
+          gold: '#D4941A',       // Deep gold
         },
         status: {
-          pending: '#F59E0B',
+          pending: '#F5A623',
           approved: '#10B981',
           rejected: '#EF4444'
         }

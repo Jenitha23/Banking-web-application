@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
-import { Wallet } from 'lucide-react';
+import { Home } from 'lucide-react';
 
 const Navbar = () => {
   return (
@@ -9,10 +9,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group ml-6 md:ml-12">
-          <div className="bg-gradient-to-tr from-bank-secondary to-white text-bank-dark p-2.5 rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300">
-            <Wallet size={24} className="stroke-[2.5]" />
+          <div className="bg-gradient-to-tr from-bank-secondary to-bank-accent text-bank-dark p-2.5 rounded-2xl shadow-lg shadow-bank-secondary/30 group-hover:scale-105 transition-transform duration-300">
+            <Home size={24} className="stroke-[2.5]" />
           </div>
-          <span className="font-bold text-2xl tracking-tight text-white">Finova</span>
+          <span className="font-bold text-2xl tracking-tight text-white">Lanka<span className="text-bank-secondary">Bank</span></span>
         </Link>
         
         {/* Desktop Menu */}
@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* Action Button */}
         <div className="hidden md:block mr-6 md:mr-12">
           <Link to="/login">
-            <Button variant="primary" className="text-sm bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-bank-dark shadow-lg px-6 py-2.5 rounded-xl font-semibold transition-all duration-300">
+            <Button variant="primary" className="text-sm bg-bank-secondary/90 backdrop-blur-md border border-bank-accent/30 text-bank-dark hover:bg-bank-accent shadow-lg shadow-bank-secondary/20 px-6 py-2.5 rounded-xl font-semibold transition-all duration-300">
               Access Account
             </Button>
           </Link>
