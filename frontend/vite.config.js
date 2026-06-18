@@ -1,19 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
+  base: command === 'serve' ? '/' : '/Banking-web-application/',
   server: {
-    // Proxy API calls to the ASP.NET backend to avoid CORS
-    // and self-signed SSL certificate issues during development.
-    // Frontend calls /api/... → Vite forwards to https://localhost:7032/api/...
+    port: 3000,
     proxy: {
       '/api': {
-        target: 'https://localhost:7032',
+        target: 'https://banking-api.azurewebsites.net',
         changeOrigin: true,
-        secure: false, // accept self-signed ASP.NET dev certificate
-      },
-    },
-  },
-})
+        secure: true,
+      }
+    }
+  }
+}))

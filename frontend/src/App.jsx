@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
+import { HashRouter } from 'react-router-dom';
 import AppRoutes from './routes/AppRoutes';
 
 /**
@@ -10,11 +9,9 @@ import AppRoutes from './routes/AppRoutes';
  */
 function App() {
   return (
-    <BrowserRouter>
-      <AuthProvider>
-        <AppRoutes />
-      </AuthProvider>
-    </BrowserRouter>
+    <HashRouter>
+      <AppRoutes />
+    </HashRouter>
   );
 }
 
